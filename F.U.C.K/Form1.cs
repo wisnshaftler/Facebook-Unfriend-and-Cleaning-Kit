@@ -46,7 +46,6 @@ namespace F.U.C.K
             button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
-            button8.Enabled = false;
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -63,7 +62,6 @@ namespace F.U.C.K
             button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
-            button8.Enabled = false;
             browser.Navigate("https://mbasic.facebook.com/profile.php?ref_component=mbasic_home_header");
         }
 
@@ -111,8 +109,7 @@ namespace F.U.C.K
             
             button4.Enabled = false;
             button5.Enabled = false;
-            button8.Enabled = false;
-
+            
             unfriendCount = frinedList.Count - 1;
             linkhavetounfriend = true;
             browser.Navigate(frinedList[unfriendCount]);
@@ -134,7 +131,6 @@ namespace F.U.C.K
             button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
-            button8.Enabled = false;
             boolgetfriend = false;
             startUnfrined = false;
             browser.Navigate("https://mbasic.facebook.com/profile.php?ref_component=mbasic_home_header");
@@ -154,7 +150,9 @@ namespace F.U.C.K
             browser.Navigate("https://mbasic.facebook.com/profile.php?ref_component=mbasic_home_header");
         }
 
-        
+        //declare variables
+        public bool inactiveunfriend, allunfriend, deleteallpost, wb2fullstory, wb2delete, wb2checkUrl, clickMore, linkhavetounfriend, confirmunfriend, startUnfrined, boolUrlcheck, boolSeeMore, boolElakiriFriend, boolFrinedList, boolUnfriend, boolgetfriend = false;
+
         private void button3_Click_1(object sender, EventArgs e)
         {
             Process.Start(listBox1.GetItemText(listBox1.SelectedItem));
@@ -165,85 +163,10 @@ namespace F.U.C.K
             Process.Start(listBox2.GetItemText(listBox2.SelectedItem));
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            browser.Hide();
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
-            button4.Enabled = false;
-            button5.Enabled = false;
-            button6.Enabled = false;
-            button7.Enabled = false;
-
-            deleteallmsg = true;
-            allunfriend = false;
-            inactiveunfriend = false;
-            browser.Navigate("mbasic.facebook.com/messages/");
-        }
-        public void deleteallmessages()
-        {
-            if (!browser.Document.Body.InnerHtml.Contains("messages/read/?"))
-            {
-                label1.Text = "All chats deleted. Deleted chats :- " + msgloopcount.ToString();
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = true;
-                deleteallmsg = false;
-                return;
-            }
-
-            label1.Text = msgloopcount.ToString() + " chats deleted";
-            button8.Enabled = false;
-            
-            if (linkhavetodelete == false && confirmdelete == false)
-            {
-                foreach (HtmlElement eli in browser.Document.Links)
-                {
-                    String link = eli.GetAttribute("href").ToString();
-                    if (link.Contains("messages/read/"))
-                    {
-                        
-                        linkhavetodelete = true;
-                        eli.InvokeMember("click");
-                    }
-                }
-            }
-            if(linkhavetodelete == true && confirmdelete == false)
-            {
-               
-                foreach (HtmlElement eli in browser.Document.GetElementsByTagName("input"))
-                {
-                    if (eli.GetAttribute("name").ToString() ==("delete"))
-                    {
-                        
-                        confirmdelete = true;
-                        eli.InvokeMember("click");
-                    }
-                }
-            }
-            if (linkhavetodelete == true && confirmdelete == true)
-            {
-                foreach (HtmlElement eli in browser.Document.Links)
-                {
-                    String link = eli.GetAttribute("href").ToString();
-                    if (link.Contains("/messages/action"))
-                    {
-                        
-                        linkhavetodelete = false;
-                        confirmdelete = false;
-                        msgloopcount += 1;
-                        eli.InvokeMember("click");
-                    }
-                }
-            }
-        }
-        //declare variables
-        public bool inactiveunfriend, allunfriend, deleteallpost, wb2fullstory, wb2delete, wb2checkUrl, clickMore, linkhavetounfriend, confirmunfriend, startUnfrined, boolUrlcheck, boolSeeMore, boolElakiriFriend, boolFrinedList, boolUnfriend, boolgetfriend = false;
-        public bool linkhavenow,linkhavetodelete, confirmdelete, deleteallmsg = false;
+        public bool linkhavenow = false;
         public bool redirectToHome, redirectToFriend = false;
 
-        public int elakiriCounter, unfriendCount, refreshCounter, postmax, msgloopcount = 0;
+        public int elakiriCounter, unfriendCount, refreshCounter, postmax = 0;
         public List<String> postLink = new List<String>();
         public List<String> elakiriFriend = new List<String>();
         public List<String> frinedList = new List<String>();
@@ -292,10 +215,6 @@ namespace F.U.C.K
                 {
                     startunfrined();
                 }
-            }if(deleteallmsg == true)
-            {
-                deleteallmessages();
-               
             }
         }
         //check url and redirect to profile page
@@ -307,10 +226,9 @@ namespace F.U.C.K
             {
                 button1.Enabled = true;
                 button2.Enabled = true;
-                button8.Enabled = true;
                
                 label1.Text = "redirecting";
-                label1.Text = "Click inactive unfriend, All unfriend or Delete all Messages";
+                label1.Text = "Click inactive unfriend or All unfriend";
                 boolUrlcheck = true;
                 
                 browser.Navigate("https://mbasic.facebook.com/profile.php?ref_component=mbasic_home_header");
@@ -319,7 +237,7 @@ namespace F.U.C.K
             {
                 
                 label1.Text = "redirecting";
-                label1.Text = "Click inactive unfriend, All unfriend or Delete all Messages";
+                label1.Text = "Click inactive unfriend or All unfriend";
                 boolUrlcheck = true;
                 browser.Navigate("https://mbasic.facebook.com/profile.php?ref_component=mbasic_home_header");
             }

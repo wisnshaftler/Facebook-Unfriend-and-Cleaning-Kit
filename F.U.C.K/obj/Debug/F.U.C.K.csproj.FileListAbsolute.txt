@@ -13,18 +13,3 @@ D:\F.U.C.K\F.U.C.K\F.U.C.K\bin\Debug\F.U.C.K.application
 D:\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.exe.manifest
 D:\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.application
 D:\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.TrustInfo.xml
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\bin\Debug\F.U.C.K.exe.config
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\bin\Debug\F.U.C.K.exe.manifest
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\bin\Debug\F.U.C.K.application
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\bin\Debug\F.U.C.K.exe
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\bin\Debug\F.U.C.K.pdb
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.csprojAssemblyReference.cache
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.Form1.resources
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.Properties.Resources.resources
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.csproj.GenerateResource.cache
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.csproj.CoreCompileInputs.cache
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.TrustInfo.xml
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.exe.manifest
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.application
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.exe
-D:\New folder (2)\F.U.C.K\F.U.C.K\F.U.C.K\obj\Debug\F.U.C.K.pdb

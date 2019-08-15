@@ -45,16 +45,15 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numberBox)).BeginInit();
             this.SuspendLayout();
             // 
             // browser
             // 
-            this.browser.Location = new System.Drawing.Point(14, 149);
+            this.browser.Location = new System.Drawing.Point(12, 172);
             this.browser.MinimumSize = new System.Drawing.Size(20, 20);
             this.browser.Name = "browser";
-            this.browser.Size = new System.Drawing.Size(851, 430);
+            this.browser.Size = new System.Drawing.Size(851, 407);
             this.browser.TabIndex = 0;
             this.browser.Url = new System.Uri("https://mbasic.facebook.com/login.php", System.UriKind.Absolute);
             this.browser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.browser_DocumentCompleted);
@@ -71,7 +70,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(113, 12);
+            this.button2.Location = new System.Drawing.Point(138, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 40);
             this.button2.TabIndex = 2;
@@ -217,22 +216,11 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(194, 12);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(88, 40);
-            this.button8.TabIndex = 16;
-            this.button8.Text = "Delete All Messages";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 591);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.browser);
             this.Controls.Add(this.label4);
@@ -277,7 +265,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
     }
 }
 
